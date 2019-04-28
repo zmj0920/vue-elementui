@@ -55,7 +55,7 @@ export default {
   left: 25%;
   width: 51%;
   height: 54px;
-  z-index: 99999;
+  z-index: 9;
 }
 
 .search-input-box {
