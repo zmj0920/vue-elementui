@@ -48,11 +48,10 @@
       <el-menu-item>
         <img src="./img/vip-bounce-2.png">
       </el-menu-item>
-
       <el-menu-item>
         <el-button-group>
-          <el-button type="primary" plain>登陆</el-button>
-          <el-button type="success" plain>注册</el-button>
+          <el-button type="button" plain style="background: #7371ef;color: #fff;">登陆</el-button>
+          <el-button type="button" plain>注册</el-button>
         </el-button-group>
       </el-menu-item>
     </el-menu>
