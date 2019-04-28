@@ -13,19 +13,17 @@
       <a href class="seach-btn seach-bgcolor a-none">搜索PPT</a>
     </div>
     <el-row>
-      <el-col :span="3" v-for="(o, index) in 10" :key="o" :offset="index > 0 ? 1 : 0">
-        <el-card :body-style="{ padding: '0px' }">
+      <el-col :span="5" v-for="(o, index) in 8" :key="o" :offset="index > 0 ? 1 : 1" class="cardcols">
+        <el-card :body-style="{ padding: '5px' }" class="cards">
           <img
             src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
             class="image"
           >
-          <div style="padding: 14px;">
-            <span>好吃的汉堡</span>
             <div class="bottom clearfix">
-              <time class="time">{{ currentDate }}</time>
-              <el-button type="text" class="button">操作按钮</el-button>
+              <span>好吃的汉堡</span>
+              <el-button type="text" class="button">查看</el-button>
             </div>
-          </div>
+         
         </el-card>
       </el-col>
     </el-row>
@@ -102,12 +100,18 @@ export default {
   text-decoration: none;
 }
 
-.time {
-  font-size: 13px;
-  color: #999;
+.cards{
+  margin-top: 20px;
+ 
 }
 
+.el-row {
+  margin: auto;
+}
+
+
 .bottom {
+  text-align: center;
   margin-top: 13px;
   line-height: 12px;
 }
