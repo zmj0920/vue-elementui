@@ -13,17 +13,19 @@
       <a href class="seach-btn seach-bgcolor a-none">搜索PPT</a>
     </div>
     <el-row>
-      <el-col :span="5" v-for="(o, index) in 8" :key="o" :offset="index > 0 ? 1 : 1" class="cardcols">
-        <el-card :body-style="{ padding: '5px' }" class="cards">
-          <img
-            src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-            class="image"
-          >
-            <div class="bottom clearfix">
-              <span>好吃的汉堡</span>
-              <el-button type="text" class="button">查看</el-button>
-            </div>
-         
+      <el-col
+        :span="5"
+        v-for="(o, index) in list_imgurl"
+        :key="o.id"
+        :offset="index > 0 ? 1 : 1"
+        class="cardcols"
+      >
+        <el-card :body-style="{ padding: '0px' }" class="cards">
+          <img :src="o.img_url" class="image">
+          <div class="bottom clearfix">
+            <span>{{o.title}}</span>
+            <el-button type="text" class="button">查看</el-button>
+          </div>
         </el-card>
       </el-col>
     </el-row>
@@ -39,7 +41,16 @@ export default {
         { id: 2, img_url: require("./../img/banner2.jpg") },
         { id: 3, img_url: require("./../img/banner3.jpg") }
       ],
-      currentDate: new Date()
+      list_imgurl: [
+        { id: 1, img_url: require("./../img/280.jpg"), title: "党课" },
+        { id: 2, img_url: require("./../img/282.jpg"), title: "立夏" },
+        { id: 3, img_url: require("./../img/285.jpg"), title: "商业计划书" },
+        { id: 4, img_url: require("./../img/287.jpg"), title: "劳动节" },
+        { id: 5, img_url: require("./../img/289.jpg"), title: "中国风" },
+        { id: 6, img_url: require("./../img/290.jpg"), title: "公司介绍" },
+        { id: 7, img_url: require("./../img/292.jpg"), title: "夏天" },
+        { id: 8, img_url: require("./../img/285.jpg"), title: "五四" }
+      ]
     };
   }
 };
@@ -100,15 +111,14 @@ export default {
   text-decoration: none;
 }
 
-.cards{
+.cards {
+  margin-left: 0px;
   margin-top: 20px;
- 
 }
 
 .el-row {
-  margin: auto;
+  margin-right: 50px;
 }
-
 
 .bottom {
   text-align: center;
