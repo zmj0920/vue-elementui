@@ -4,7 +4,6 @@
       <el-menu-item>
         <img src="./img/logo.v3.png" alt class="logo">
       </el-menu-item>
-
       <el-menu-item index="1">
         <a href="#" target class="a-none">PPT模板</a>
       </el-menu-item>
@@ -38,7 +37,9 @@
         <el-menu-item index="2-3">矢量素材</el-menu-item>
         <el-menu-item index="2-3">音乐</el-menu-item>
       </el-submenu>
-
+       <el-menu-item  class="n-w">
+       
+      </el-menu-item>
       <el-menu-item>
         <img src="./img/vip-bounce-2.png">
       </el-menu-item>
@@ -82,5 +83,8 @@ export default {
 }
 .icon-btn {
   border: none;
+}
+.n-w{
+width: 10%;
 }
 </style>
