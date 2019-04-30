@@ -30,6 +30,9 @@
       </el-menu-item>
       <el-submenu index="3">
         <template slot="title">更多</template>
+
+
+        
         <el-menu-item index="2-1">字体库</el-menu-item>
         <el-menu-item index="2-2">Word模板</el-menu-item>
         <el-menu-item index="2-3">Excel模板</el-menu-item>
@@ -37,9 +40,6 @@
         <el-menu-item index="2-3">矢量素材</el-menu-item>
         <el-menu-item index="2-3">音乐</el-menu-item>
       </el-submenu>
-       <el-menu-item  class="n-w">
-       
-      </el-menu-item>
       <el-menu-item>
         <img src="./img/vip-bounce-2.png">
       </el-menu-item>
@@ -84,7 +84,5 @@ export default {
 .icon-btn {
   border: none;
 }
-.n-w{
-width: 10%;
-}
+
 </style>

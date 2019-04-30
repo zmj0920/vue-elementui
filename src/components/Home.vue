@@ -190,7 +190,7 @@ export default {
 }
 .nav-round {
   margin-top: 30px;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 .foot-banner{
 height: 300px;
