@@ -72,7 +72,11 @@
       </el-col>
     </el-row>
 
-    <el-row class="foot-banner"></el-row>
+    <el-row class="foot-banner">
+    
+
+
+    </el-row>
     <el-row class="foot-content"></el-row>
     <el-row class="bottom-seo-box"></el-row>
   </div>
@@ -194,7 +198,9 @@ export default {
 }
 .foot-banner{
 height: 300px;
-background-color: #28dd8e;
+background-image: url("./../img/foot_banner.jpg");
+background-position-x: -130px;
+/* background-color: #28dd8e; */
 }
 .foot-content{
 height: 205px;
@@ -206,7 +212,4 @@ background-color:#7371ef;
 height: 251px;
 background-color:black;
 }
-
-
-
 </style>
