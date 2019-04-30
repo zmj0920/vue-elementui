@@ -73,7 +73,7 @@
     </el-row>
 
     <el-row class="foot-banner">
-    
+     <el-button class="foot-banner-btn" style="background-color:#60e2a0">默认按钮</el-button>
 
 
     </el-row>
@@ -197,19 +197,26 @@ export default {
   margin-left: 15%;
 }
 .foot-banner{
+  margin-top: 40px;
+  padding-top: 230px;
 height: 300px;
 background-image: url("./../img/foot_banner.jpg");
 background-position-x: -130px;
+text-align: center;
 /* background-color: #28dd8e; */
 }
+.foot-banner-btn{
+  width: 200px;
+}
+
 .foot-content{
 height: 205px;
-background-color:#7371ef;
+background-color:#1B1B1B;
 }
 
 .bottom-seo-box{
 
 height: 251px;
-background-color:black;
+background-color:#888888;
 }
 </style>
