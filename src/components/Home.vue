@@ -54,7 +54,6 @@
       <el-button type="primary" plain>党员大会PPT</el-button>
     </el-row>
 
-
     <el-row class="el-rows">
       <el-col
         :span="5"
@@ -74,12 +73,41 @@
     </el-row>
 
     <el-row class="foot-banner">
-     <el-button class="foot-banner-btn" style="background-color:#60e2a0">默认按钮</el-button>
-
-
+      <el-button class="foot-banner-btn" style="background-color:#60e2a0">立即体验</el-button>
     </el-row>
-    <el-row class="foot-content"></el-row>
-    <el-row class="bottom-seo-box"></el-row>
+    <el-row class="foot-content">
+      <div class="f1">
+        <div class="f5">
+          <span class="foo">关于我们 |</span>
+          <span class="foo">版权声明 |</span>
+          <span class="foo">注册协议 |</span>
+          <span class="foo">友情链接 |</span>
+          <span class="foo">热门搜索 |</span>
+          <span class="foo">客户服务 |</span>
+          <span class="foo">隐私政策 |</span>
+          <span class="foo">网站地图</span>
+        </div>
+        <div>Copyright © 2016-2019 觅知网络科技有限公司 · 沪ICP备16055192号-1</div>
+        <div>若您发现您的权利被侵害，请联系 2879485286@qq.com</div>
+      </div>
+    <div class="f2">
+       <div>周一至周五9：00-18：00</div>
+      <div>
+         <span class="foo">热门搜索 </span>
+          <span class="foo">PPT模板 </span>
+          <span class="foo">PNG素材 </span>
+          <span class="foo">背景素材 </span>
+          <span class="foo">设计素材视频 </span>
+      </div>
+      <div>
+         <span class="foo">邀请函ppt </span>
+          <span class="foo"> 网络安全ppt </span>
+          <span class="foo"> 古诗ppt </span>
+          <span class="foo">汽车ppt模板 </span>
+          <span class="foo"> 启动会ppt </span>
+      </div>
+    </div>
+    </el-row>
   </div>
 </template>
 <script>
@@ -197,27 +225,40 @@ export default {
   margin-top: 30px;
   margin-left: 10%;
 }
-.foot-banner{
+.foot-banner {
   margin-top: 40px;
   padding-top: 230px;
-height: 300px;
-background-image: url("./../img/foot_banner.jpg");
-background-position-x: -130px;
-text-align: center;
-/* background-color: #28dd8e; */
+  height: 300px;
+  background-image: url("./../img/foot_banner.jpg");
+  background-position-x: -130px;
+  text-align: center;
+  /* background-color: #28dd8e; */
 }
-.foot-banner-btn{
+.foot-banner-btn {
   width: 200px;
 }
-
-.foot-content{
-height: 205px;
-background-color:#1B1B1B;
+.foot-content {
+ line-height: 40px;
+  display: flex;
+  height: 150px;
+  color: #ffffff;
+  /* background-color: #1b1b1b; */
+  text-align: center;
+  background-color: #888888;
 }
-
-.bottom-seo-box{
-
-height: 251px;
-background-color:#888888;
+.f1{
+  width: 65%;
+  height: 150px;
+}
+.f2{
+  width: 35%;
+  height: 150px;
+  /* background-color: #28dd8e; */
+}
+.foo{
+  padding-left: 10px;
+}
+.f5 {
+  text-align: center;
 }
 </style>
