@@ -21,31 +21,77 @@
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>企业职场</span>
-          <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+          <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-        <div  v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
+        <!-- <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div> -->
+        <div class="text item">
+          <span >公司介绍PPT</span> 
+          <span class="nav-e">商业计划书PPT</span>
+        </div>
+        <div class="text item">
+          <span>工作总结PPT</span>
+          <span class="nav-e">竞聘PPT</span>
+        </div>
+        <div class="text item">
+          <span>企业培训PPT</span>
+          <span class="nav-e">Keynote模板</span>
+        </div>
+
       </el-card>
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>党政文化</span>
-          <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+          <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-        <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
+       <div class="text item">
+          <span>公司介绍PPT</span> 
+          <span class="nav-e">商业计划书PPT</span>
+        </div>
+        <div class="text item">
+          <span>工作总结PPT</span>
+          <span class="nav-e">竞聘PPT</span>
+        </div>
+        <div class="text item">
+          <span>企业培训PPT</span>
+          <span class="nav-e">Keynote模板</span>
+        </div>
       </el-card>
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>学校教育</span>
-          <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+          <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-        <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
+         <div class="text item">
+          <span >公司介绍PPT</span> 
+          <span class="nav-e">商业计划书PPT</span>
+        </div>
+        <div class="text item">
+          <span>工作总结PPT</span>
+          <span class="nav-e">竞聘PPT</span>
+        </div>
+        <div class="text item">
+          <span>企业培训PPT</span>
+          <span class="nav-e">Keynote模板</span>
+        </div>
       </el-card>
 
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>热门风格</span>
-          <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+          <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-        <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
+        <div class="text item">
+          <span >公司介绍PPT</span> 
+          <span class="nav-e">商业计划书PPT</span>
+        </div>
+        <div class="text item">
+          <span>工作总结PPT</span>
+          <span class="nav-e">竞聘PPT</span>
+        </div>
+        <div class="text item">
+          <span>企业培训PPT</span>
+          <span class="nav-e">Keynote模板</span>
+        </div>
       </el-card>
     </el-row>
 
@@ -66,7 +112,11 @@
         </el-card>
       </el-col>
     </el-row>
-      <!-- <button @click="downloadppt">点击按钮下载</button> -->
+    <el-row class="prev">
+      <el-pagination background layout="prev, pager, next" :total="100"></el-pagination>
+    </el-row>
+
+    <!-- <button @click="downloadppt">点击按钮下载</button> -->
   </div>
 </template>
 <script>
@@ -86,11 +136,11 @@ export default {
       ]
     };
   },
-  methods:{
-      downloadppt(){
-          var str = "../img/让成长带你穿透迷茫.pptx";
-            download(str, "让成长带你穿透迷茫.pptx", "image/jpg");
-      }
+  methods: {
+    downloadppt() {
+      var str = "../img/让成长带你穿透迷茫.pptx";
+      download(str, "让成长带你穿透迷茫.pptx", "image/jpg");
+    }
   }
 };
 </script>
@@ -151,10 +201,14 @@ export default {
 .clearfix:after {
   clear: both;
 }
-
+.clearfix{
+  text-align: center;
+}
 .box-card {
-  margin-left: 40px;
-  width: 280px;
+ 
+  margin-left: 65px;
+  height: 200px;
+  width: 250px;
 }
 
 .cards {
@@ -188,4 +242,14 @@ export default {
   margin-top: 30px;
   margin-left: 10%;
 }
+.prev {
+  margin-top: 50px;
+  text-align: center;
+}
+.nav-e{
+ padding-left: 30px;
+}
+/* .m-au{
+
+} */
 </style>
