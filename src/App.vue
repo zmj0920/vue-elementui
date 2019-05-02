@@ -2,10 +2,13 @@
   <div>
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect" class="nav">
       <el-menu-item>
-        <img src="./img/logo.v3.png" alt class="logo">
+        <router-link to="/">
+          <img src="./img/logo.v3.png" alt class="logo">
+        </router-link>
       </el-menu-item>
       <el-menu-item index="1">
-        <a href="#" target class="a-none">PPT模板</a>
+        <router-link to="/pptt" class="a-none">PPT模板</router-link>
+        <!-- <a href="/pptt" target class=""></a> -->
       </el-menu-item>
       <el-menu-item index="2">
         <a href="#" target class="a-none">设计素材</a>
@@ -31,8 +34,6 @@
       <el-submenu index="3">
         <template slot="title">更多</template>
 
-
-        
         <el-menu-item index="2-1">字体库</el-menu-item>
         <el-menu-item index="2-2">Word模板</el-menu-item>
         <el-menu-item index="2-3">Excel模板</el-menu-item>
@@ -52,11 +53,10 @@
     </el-menu>
     <router-view></router-view>
     <!-- 底部 -->
-   <el-row class="foot-banner">
+    <el-row class="foot-banner">
       <el-button class="foot-banner-btn" style="background-color:#60e2a0">立即体验</el-button>
     </el-row>
 
-    
     <el-row class="foot-content">
       <div class="f1">
         <div class="f5">
@@ -72,23 +72,23 @@
         <div>Copyright © 2016-2019 觅知网络科技有限公司 · 沪ICP备16055192号-1</div>
         <div>若您发现您的权利被侵害，请联系 2879485286@qq.com</div>
       </div>
-    <div class="f2">
-       <div>周一至周五9：00-18：00</div>
-      <div>
-         <span class="foo">热门搜索 </span>
-          <span class="foo">PPT模板 </span>
-          <span class="foo">PNG素材 </span>
-          <span class="foo">背景素材 </span>
-          <span class="foo">设计素材视频 </span>
+      <div class="f2">
+        <div>周一至周五9：00-18：00</div>
+        <div>
+          <span class="foo">热门搜索</span>
+          <span class="foo">PPT模板</span>
+          <span class="foo">PNG素材</span>
+          <span class="foo">背景素材</span>
+          <span class="foo">设计素材视频</span>
+        </div>
+        <div>
+          <span class="foo">邀请函ppt</span>
+          <span class="foo">网络安全ppt</span>
+          <span class="foo">古诗ppt</span>
+          <span class="foo">汽车ppt模板</span>
+          <span class="foo">启动会ppt</span>
+        </div>
       </div>
-      <div>
-         <span class="foo">邀请函ppt </span>
-          <span class="foo"> 网络安全ppt </span>
-          <span class="foo"> 古诗ppt </span>
-          <span class="foo">汽车ppt模板 </span>
-          <span class="foo"> 启动会ppt </span>
-      </div>
-    </div>
     </el-row>
     <!--尾部-->
   </div>
@@ -138,7 +138,7 @@ export default {
   width: 200px;
 }
 .foot-content {
- line-height: 40px;
+  line-height: 40px;
   display: flex;
   height: 150px;
   color: #ffffff;
@@ -146,16 +146,16 @@ export default {
   text-align: center;
   background-color: #888888;
 }
-.f1{
+.f1 {
   width: 65%;
   height: 150px;
 }
-.f2{
+.f2 {
   width: 35%;
   height: 150px;
   /* background-color: #28dd8e; */
 }
-.foo{
+.foo {
   padding-left: 10px;
 }
 .f5 {

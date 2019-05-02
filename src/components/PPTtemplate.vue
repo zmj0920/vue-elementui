@@ -66,6 +66,7 @@
         </el-card>
       </el-col>
     </el-row>
+      <!-- <button @click="downloadppt">点击按钮下载</button> -->
   </div>
 </template>
 <script>
@@ -84,6 +85,12 @@ export default {
         { id: 8, img_url: require("./../img/285.jpg"), title: "五四" }
       ]
     };
+  },
+  methods:{
+      downloadppt(){
+          var str = "../img/让成长带你穿透迷茫.pptx";
+            download(str, "让成长带你穿透迷茫.pptx", "image/jpg");
+      }
   }
 };
 </script>
