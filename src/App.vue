@@ -11,7 +11,8 @@
         <!-- <a href="/pptt" target class=""></a> -->
       </el-menu-item>
       <el-menu-item index="2">
-        <a href="#" target class="a-none">设计素材</a>
+         <router-link to="/sucai" class="a-none">设计素材</router-link>
+        <!-- <a href="#" target class="a-none"></a> -->
       </el-menu-item>
       <el-menu-item index="4">
         <a href="#" target class="a-none">平面模板</a>
