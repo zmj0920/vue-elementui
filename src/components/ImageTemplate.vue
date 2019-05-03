@@ -9,7 +9,7 @@
       </el-image>
     </div>
     <div class="seach-content">
-      <div class="search-input-box">
+      <div class="search-input-box-img">
         <input type="text" class="seach-input" placeholder="搜索作品">
         <a href="#" class="img-seach-btn a-none"></a>
       </div>
@@ -156,7 +156,7 @@ export default {
   height: 44px;
   z-index: 9;
 }
-.search-input-box {
+.search-input-box-img {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
