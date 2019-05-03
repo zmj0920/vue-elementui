@@ -12,12 +12,12 @@
     <div class="seach-content-ppt">
       <div class="search-input-box-ppt">
         <input type="text" class="seach-input-ppt" placeholder="搜索作品">
-        <a href class="btn-icon a-none"></a>
+        <a href="#" class="btn-icon a-none"></a>
         <!-- <el-button class="btn-icon">搜索素材</el-button> -->
       </div>
     </div>
 
-    <el-row style=" display: flex;flex-flow: row wrap;">
+    <el-row style=" display: flex;flex-flow: row wrap;margin-top: 50px;">
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>企业职场</span>
@@ -25,7 +25,7 @@
         </div>
         <!-- <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div> -->
         <div class="text item">
-          <span >公司介绍PPT</span> 
+          <span>公司介绍PPT</span>
           <span class="nav-e">商业计划书PPT</span>
         </div>
         <div class="text item">
@@ -36,15 +36,14 @@
           <span>企业培训PPT</span>
           <span class="nav-e">Keynote模板</span>
         </div>
-
       </el-card>
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <span>党政文化</span>
           <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-       <div class="text item">
-          <span>公司介绍PPT</span> 
+        <div class="text item">
+          <span>公司介绍PPT</span>
           <span class="nav-e">商业计划书PPT</span>
         </div>
         <div class="text item">
@@ -61,8 +60,8 @@
           <span>学校教育</span>
           <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
-         <div class="text item">
-          <span >公司介绍PPT</span> 
+        <div class="text item">
+          <span>公司介绍PPT</span>
           <span class="nav-e">商业计划书PPT</span>
         </div>
         <div class="text item">
@@ -81,7 +80,7 @@
           <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
         </div>
         <div class="text item">
-          <span >公司介绍PPT</span> 
+          <span>公司介绍PPT</span>
           <span class="nav-e">商业计划书PPT</span>
         </div>
         <div class="text item">
@@ -113,9 +112,33 @@
       </el-col>
     </el-row>
     <el-row class="prev">
-      <el-pagination background layout="prev, pager, next" :total="100"></el-pagination>
+      <el-button-group>
+        <el-button
+          style="background-color: #7371ef; color:#ffffff"
+          icon="el-icon-arrow-left"
+          round
+        >上一页</el-button>
+        <el-button style="background-color: #7371ef;color:#ffffff" round>
+          下一页
+          <i class="el-icon-arrow-right el-icon--right"></i>
+        </el-button>
+      </el-button-group>
     </el-row>
-
+    <el-row class="btn-mini">
+      <span style="color: #666;font-size: 14px;">热门推荐：</span>
+      <el-button size="mini" round>党课</el-button>
+      <el-button size="mini" round>商业计划书</el-button>
+      <el-button size="mini" round>说课</el-button>
+      <el-button size="mini" round>中国风</el-button>
+      <el-button size="mini" round>儿童</el-button>
+      <el-button size="mini" round>家长会</el-button>
+      <el-button size="mini" round>五四</el-button>
+      <el-button size="mini" round>公司介绍</el-button>
+      <el-button size="mini" round>五一</el-button>
+      <el-button size="mini" round>工作总结</el-button>
+      <el-button size="mini" round>述职报告</el-button>
+      <el-button size="mini" round>读书分享</el-button>
+    </el-row>
     <!-- <button @click="downloadppt">点击按钮下载</button> -->
   </div>
 </template>
@@ -201,11 +224,10 @@ export default {
 .clearfix:after {
   clear: both;
 }
-.clearfix{
+.clearfix {
   text-align: center;
 }
 .box-card {
- 
   margin-left: 65px;
   height: 200px;
   width: 250px;
@@ -246,10 +268,11 @@ export default {
   margin-top: 50px;
   text-align: center;
 }
-.nav-e{
- padding-left: 30px;
+.nav-e {
+  padding-left: 30px;
 }
-/* .m-au{
-
-} */
+.btn-mini {
+  text-align: center;
+  margin-top: 50px;
+}
 </style>
