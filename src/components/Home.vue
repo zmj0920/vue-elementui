@@ -34,7 +34,7 @@
         class="cardcols"
       >
         <el-card :body-style="{ padding: '0px' }" class="cards">
-          <img :src="'http://localhost:3000/public//img/'+o.pptimg" class="image">
+          <img :src="'http://localhost:3000/public/img/'+o.pptimg" class="image">
           <div class="bottom clearfix">
             <span>{{o.pptname}}</span>
             <el-button type="text" class="button"></el-button>
