@@ -15,26 +15,25 @@
     </div>
 
     <el-row class="nav-round">
-      <el-button round plain>论文答辩PPT</el-button>
-      <el-button type="primary" round plain>说课PPT模板</el-button>
-      <el-button type="success" round plain>商务PPT模板</el-button>
-      <el-button type="info" round plain>安全教育PPT</el-button>
-      <el-button type="warning" round plain>创业计划书PPT</el-button>
-      <el-button type="danger" round plain>人工智能PPT</el-button>
-      <el-button round plain>家长会PPT</el-button>
-      <el-button type="primary" round plain>党员大会PPT</el-button>
+      <el-button
+        type="primary"
+        round
+        plain
+        v-for="ppttype in ppttypes"
+        :key="ppttype.id"
+      >{{ppttype.ppttype}}</el-button>
     </el-row>
 
     <el-row class="el-rows">
       <el-col
         :span="5"
-        v-for="(o, index) in list"
+        v-for="(o, index) in pptlist"
         :key="o.id"
         :offset="index > 0 ? 1 : 1"
         class="cardcols"
       >
         <el-card :body-style="{ padding: '0px' }" class="cards">
-          <img :src="'http://localhost:3000/public/img/'+o.pptimg" class="image">
+          <img :src="'http://localhost:3000/public/pptimg/'+o.pptimg" class="image">
           <div class="bottom clearfix">
             <span>{{o.pptname}}</span>
             <el-button type="text" class="button"></el-button>
@@ -44,35 +43,26 @@
     </el-row>
 
     <el-row class="nav-round">
-      <el-button plain>论文答辩PPT</el-button>
-      <el-button type="primary" plain>说课PPT模板</el-button>
-      <el-button type="success" plain>商务PPT模板</el-button>
-      <el-button type="info" plain>安全教育PPT</el-button>
-      <el-button type="warning" plain>创业计划书PPT</el-button>
-      <el-button type="danger" plain>人工智能PPT</el-button>
-      <el-button plain>家长会PPT</el-button>
-      <el-button type="primary" plain>党员大会PPT</el-button>
+      <el-button plain type="success" v-for="imgtype in imgtypes" :key="imgtype.id">{{imgtype.type}}</el-button>
     </el-row>
 
     <el-row class="el-rows">
       <el-col
         :span="5"
-        v-for="(o, index) in boxlist_imgurl"
+        v-for="(o, index) in imglist"
         :key="o.id"
         :offset="index > 0 ? 1 : 1"
         class="cardcols"
       >
         <el-card :body-style="{ padding: '0px' }" class="cards">
-          <img :src="o.img_url" class="image">
+          <img :src="'http://localhost:3000/public/imgs/'+o.img1" class="image">
           <div class="bottom clearfix">
-            <span>{{o.title}}</span>
+            <span>{{o.imgname}}</span>
             <el-button type="text" class="button"></el-button>
           </div>
         </el-card>
       </el-col>
     </el-row>
-
- 
   </div>
 </template>
 <script>
@@ -84,40 +74,39 @@ export default {
         { id: 2, img_url: require("./../img/banner2.jpg") },
         { id: 3, img_url: require("./../img/banner3.jpg") }
       ],
-      list_imgurl: [
-        { id: 1, img_url: require("./../img/280.jpg"), title: "党课" },
-        { id: 2, img_url: require("./../img/282.jpg"), title: "立夏" },
-        { id: 3, img_url: require("./../img/285.jpg"), title: "商业计划书" },
-        { id: 4, img_url: require("./../img/287.jpg"), title: "劳动节" },
-        { id: 5, img_url: require("./../img/289.jpg"), title: "中国风" },
-        { id: 6, img_url: require("./../img/290.jpg"), title: "公司介绍" },
-        { id: 7, img_url: require("./../img/292.jpg"), title: "夏天" },
-        { id: 8, img_url: require("./../img/285.jpg"), title: "五四" }
-      ],
-      boxlist_imgurl: [
-        { id: 1, img_url: require("./../img/bx-1.jpg"), title: "党课" },
-        { id: 2, img_url: require("./../img/bx-2.jpg"), title: "立夏" },
-        { id: 3, img_url: require("./../img/bx-3.jpg"), title: "商业计划书" },
-        { id: 4, img_url: require("./../img/bx-4.jpg"), title: "劳动节" },
-        { id: 5, img_url: require("./../img/bx-5.jpg"), title: "中国风" },
-        { id: 6, img_url: require("./../img/bx-6.jpg"), title: "公司介绍" },
-        { id: 7, img_url: require("./../img/bx-7.jpg"), title: "夏天" },
-        { id: 8, img_url: require("./../img/bx-8.jpg"), title: "五四" }
-      ],
-       list:[]
+      pptlist: [],
+      ppttypes: [],
+      imgtypes: [],
+      imglist: []
     };
   },
-  created(){
-      this.pptimgdata();
+  created() {
+    this.pptimgdata();
+    this.ppttype();
+    this.imgtype();
+    this.imgs();
   },
-  methods:{
-       pptimgdata(){
-   
-        this.axios.get("http://localhost:3000/ppt/find").then(result=>{
-         this.list=result.data;
-         console.log(result.data);
-        })
-       }
+  methods: {
+    pptimgdata() {
+      this.axios.get("http://localhost:3000/ppt/find").then(result => {
+        this.pptlist = result.data;
+      });
+    },
+    ppttype() {
+      this.axios.get("http://localhost:3000/ppttype/find").then(result => {
+        this.ppttypes = result.data;
+      });
+    },
+    imgtype() {
+      this.axios.get("http://localhost:3000/imagetType/find").then(result => {
+        this.imgtypes = result.data;
+      });
+    },
+    imgs() {
+      this.axios.get("http://localhost:3000/img/find").then(result => {
+        this.imglist = result.data;
+      });
+    }
   }
 };
 </script>
@@ -203,6 +192,4 @@ export default {
   margin-top: 30px;
   margin-left: 10%;
 }
-
-
 </style>
