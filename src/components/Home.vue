@@ -28,15 +28,15 @@
     <el-row class="el-rows">
       <el-col
         :span="5"
-        v-for="(o, index) in list_imgurl"
+        v-for="(o, index) in list"
         :key="o.id"
         :offset="index > 0 ? 1 : 1"
         class="cardcols"
       >
         <el-card :body-style="{ padding: '0px' }" class="cards">
-          <img :src="o.img_url" class="image">
+          <img :src="'http://localhost:3000/public//img/'+o.pptimg" class="image">
           <div class="bottom clearfix">
-            <span>{{o.title}}</span>
+            <span>{{o.pptname}}</span>
             <el-button type="text" class="button"></el-button>
           </div>
         </el-card>
@@ -103,8 +103,21 @@ export default {
         { id: 6, img_url: require("./../img/bx-6.jpg"), title: "公司介绍" },
         { id: 7, img_url: require("./../img/bx-7.jpg"), title: "夏天" },
         { id: 8, img_url: require("./../img/bx-8.jpg"), title: "五四" }
-      ]
+      ],
+       list:[]
     };
+  },
+  created(){
+      this.pptimgdata();
+  },
+  methods:{
+       pptimgdata(){
+   
+        this.axios.get("http://localhost:3000/ppt/find").then(result=>{
+         this.list=result.data;
+         console.log(result.data);
+        })
+       }
   }
 };
 </script>
