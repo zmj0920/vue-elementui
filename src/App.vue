@@ -47,7 +47,7 @@
       </el-menu-item>
       <el-menu-item>
         <el-button-group>
-          <el-button type="button" plain style="background: #7371ef;color: #fff;">登陆</el-button>
+          <el-button type="button" plain style="background: #7371ef;color: #fff;">QQ登陆</el-button>
           <el-button type="button" plain>注册</el-button>
         </el-button-group>
       </el-menu-item>
@@ -94,7 +94,6 @@
     <!--尾部-->
   </div>
 </template>
-
 <script>
 export default {
   data() {
