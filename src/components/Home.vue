@@ -50,7 +50,7 @@
       <el-col
         :span="5"
         v-for="(o, index) in imglist"
-        :key="o.id"
+        :key="index"
         :offset="index > 0 ? 1 : 1"
         class="cardcols"
       >
@@ -105,6 +105,7 @@ export default {
     imgs() {
       this.axios.get("http://localhost:3000/img/find").then(result => {
         this.imglist = result.data;
+        console.log(this.imglist);
       });
     }
   }
